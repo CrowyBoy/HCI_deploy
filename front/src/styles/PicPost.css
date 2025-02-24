@@ -1,0 +1,10 @@
+.pfp{
+    height: 50px;
+    width: 50px;
+}
+
+.post { margin: 0px auto; }
+
+table,td{
+    border: 1px solid black;
+}
