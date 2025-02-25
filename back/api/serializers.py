@@ -21,7 +21,7 @@ class PostSerializer(serializers.ModelSerializer):
 class UploaderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Uploader
-        fields = ["id","uploaderid","username","pfp"]
+        fields = ["id","username","pfp"]
 
 class UserLikesSerializer(serializers.ModelSerializer):
     class Meta:

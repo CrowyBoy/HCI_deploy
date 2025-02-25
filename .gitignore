@@ -16,3 +16,5 @@ back/back/__pycache__/urls.cpython-313.pyc
 back/back/__pycache__/wsgi.cpython-313.pyc
 front/.env
 back/db.sqlite3
+back/api/__pycache__/start.cpython-313.pyc
+back/api/__pycache__/tests.cpython-313.pyc
