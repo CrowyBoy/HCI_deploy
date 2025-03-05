@@ -2,9 +2,29 @@
     height: 50px;
     width: 50px;
 }
+.catpost{
+    width: 750px;
+    height: auto;
+}
+.content{
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 10px;
 
-.post { margin: 0px auto; }
-
-table,td{
-    border: 1px solid black;
+}
+main{
+    background-color:  #A3B18A;
+    margin: 0 auto;
+    max-width: 800px;
+}
+body{
+    background-color: #A3B18A;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #344E41;
+    border-color: #344E41;
+}
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #588157;
+    border-color: #588157;
 }

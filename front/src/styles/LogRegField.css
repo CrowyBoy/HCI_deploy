@@ -1,0 +1,23 @@
+.form-container{
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+}
+button, label, input{
+    margin-top: 10px;
+}
+div{margin-left: 25%;
+margin-right: 25%;
+background-color: #A3B18A;
+}
+body{
+    background-color: #A3B18A;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #344E41;
+    border-color: #344E41;
+}
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #588157;
+    border-color: #588157;
+}

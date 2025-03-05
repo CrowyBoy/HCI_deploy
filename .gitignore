@@ -18,3 +18,4 @@ front/.env
 back/db.sqlite3
 back/api/__pycache__/start.cpython-313.pyc
 back/api/__pycache__/tests.cpython-313.pyc
+project-export.txt

@@ -20,4 +20,6 @@ class UserLikes(models.Model):
 class UserFollows(models.Model):
     uploaderid = models.ForeignKey(Uploader, on_delete=models.CASCADE)
     userid = models.ForeignKey(User, on_delete=models.CASCADE)
+    def __str__(self):
+        return f"uploaderid: {self.uploaderid} userid: {self.userid}"
 # Create your models here.
