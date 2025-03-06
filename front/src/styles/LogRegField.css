@@ -13,11 +13,23 @@ background-color: #A3B18A;
 body{
     background-color: #A3B18A;
 }
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:active:focus {
     background-color: #344E41;
     border-color: #344E41;
 }
-.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited, .btn-secondary:active:focus{
     background-color: #588157;
     border-color: #588157;
+}
+.btn-outline-primary {
+    border-color: #344E41;
+    color: #344E41;
+}
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited, .btn-outline-primary:active:focus{
+    background-color: #344E41;
+    border-color: #344E41;
+    color: white;
+}
+.btn-primary:active:focus, .btn-outline-primary:active:focus, .btn-secondary:active:focus{
+    transform: translateY(2px);
 }

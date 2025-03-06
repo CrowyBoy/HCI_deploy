@@ -56,7 +56,7 @@ function PicPost() {
                     <img src={post.pfp} alt="cat" className="pfp" onClick={profileNav}/>
                 </div>
                 <div className="col m-0">
-                    <h3 className="m-0 ps-2" onClick={profileNav}>{post.username}</h3>
+                    <h3 className="m-0 ps-2" id="username" onClick={profileNav}>{post.username}</h3>
                 </div>
             </div>
             <div className="row justify-content-center g-0">

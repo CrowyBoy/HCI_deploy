@@ -43,6 +43,6 @@ class ApiConfig(AppConfig):
                     for file in filenames:
                         print(f"counter is {counter}")
                         print(Uploader.objects.all())
-                        post = Post(posterid=Uploader.objects.get(id=counter), content=f"{folders[counter-1]}/{file}")
+                        post = Post(posterid=Uploader.objects.get(username=folders[counter-1]), content=f"{folders[counter-1]}/{file}")
                         post.save()
         return
