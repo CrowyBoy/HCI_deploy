@@ -15,15 +15,26 @@ function LogRegFields({route, mode}) {
         setLoading(true)
         e.preventDefault()
         try {
+            console.log("we here")
             const res = await api.post(route, {username,password})
+            console.log("HALLOOOO")
             if (mode === "login"){
+                const queryParam = new URLSearchParams(window.location.search)
+                const ver = queryParam.get("ver")
                 localStorage.setItem(ACC_TOKEN, res.data.access)
                 localStorage.setItem(REF_TOKEN, res.data.refresh)
-                nav("/")
+                if(ver === "leaf"){
+                    nav("/prefrences")
+                }
+                else{
+                    nav("/")
+                }
             }
             else{
+                const queryParam = new URLSearchParams(window.location.search)
+                const ver = queryParam.get("ver")
                 alert("You have created an account")
-                nav("/Login")
+                nav("/Login?ver="+ver)
             }
         } catch (err) {
             alert(err)

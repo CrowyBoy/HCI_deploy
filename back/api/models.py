@@ -22,4 +22,21 @@ class UserFollows(models.Model):
     userid = models.ForeignKey(User, on_delete=models.CASCADE)
     def __str__(self):
         return f"uploaderid: {self.uploaderid} userid: {self.userid}"
+    
+class UserPrefrences(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    fluffy_val = models.PositiveSmallIntegerField()
+    majestic_val = models.PositiveSmallIntegerField()
+    funny_val = models.PositiveSmallIntegerField()
+    outfit_val = models.PositiveSmallIntegerField()
+    def __str__(self):
+        return f"user: {self.user}, fluffy_val: {self.fluffy_val}, majestic_val: {self.majestic_val}, funny_val: {self.funny_val}, outfit_val: {self.outfit_val}"
+    
+
+class UploaderTags(models.Model):
+    uploader = models.ForeignKey(Uploader, on_delete=models.CASCADE)
+    fluffy = models.BooleanField()
+    majestic = models.BooleanField()
+    funny = models.BooleanField()
+    outfit = models.BooleanField()
 # Create your models here.

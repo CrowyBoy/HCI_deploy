@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Post, Uploader, UserLikes, UserFollows
+from .models import Post, Uploader, UserLikes, UserFollows , UserPrefrences, UploaderTags
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -34,3 +34,14 @@ class UserFollowsSerializer(serializers.ModelSerializer):
         model = UserFollows
         fields = ["id","uploaderid","userid"]
         extra_kwargs = {"uploaderid":{"read_only":True},"userid":{"read_only":True}}
+
+class UserPrefrencesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPrefrences
+        fields = ["id","user","fluffy_val","majestic_val","funny_val","outfit_val"]
+        extra_kwargs = {"user":{"read_only":True}}
+
+class UploaderTagsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UploaderTags
+        fields = ["id","uploader","fluffy","majestic","funny","outfit"]

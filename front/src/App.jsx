@@ -6,6 +6,7 @@ import NotPage from "./pages/NotPage"
 import Profile from "./pages/Profile"
 import Main from "./pages/Main"
 import ProteccRoute from "./components/ProteccRoute"
+import Prefrences from "./pages/Prefrences"
 function Logout() {
   return <Navigate to="/login" />
 }
@@ -26,6 +27,11 @@ function App() {
       <Route path="/profile" element={
         <ProteccRoute>
           <Profile />
+        </ProteccRoute>
+      }/>
+      <Route path="/prefrences" element={
+        <ProteccRoute>
+          <Prefrences/>
         </ProteccRoute>
       }/>
       <Route path="/login" element={<Login/>}/>

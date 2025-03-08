@@ -20,4 +20,15 @@ folders = [f for f in os.listdir(full_path) if os.path.isdir(os.path.join(full_p
 print(folders)
 print(os.listdir(full_path))
 """
+import json
 
+# Open and read the JSON file
+with open('/home/balazsa/Documents/HCI_project_nonrand/back/profiles/crunch.json', 'r') as file:
+    data = json.load(file)
+
+# Print the data
+print(data)
+tags = data["tags"]
+print(tags)
+if tags["funny"]:
+    print(tags)
