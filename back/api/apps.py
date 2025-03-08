@@ -80,6 +80,6 @@ class ApiConfig(AppConfig):
                 currentTags.save()
             for uploader,file in zip(uploaders,files):
                 for filename in file:
-                    post = Post(posterid=Uploader.objects.get(username=uploader), content=filename)
+                    post = Post(posterid=Uploader.objects.get(username=uploader), content=f"{uploader}/{filename}")
                     post.save()
         return
