@@ -8,6 +8,7 @@ class ApiConfig(AppConfig):
         import os, json
         if os.environ.get('RUN_MAIN'):
             from .models import Post, Uploader, UploaderTags
+            """
             print("in get query")
             numOfPhoto = 4
             absolute_path = os.path.dirname(__file__)
@@ -56,5 +57,29 @@ class ApiConfig(AppConfig):
                             print(Uploader.objects.all())
                             post = Post(posterid=Uploader.objects.get(username=folders[counter-1]), content=f"{folders[counter-1]}/{file}")
                             post.save()
+                            """
+            uploaders = ['crunch','ginger','grumpy','hamilton','nala','venus']
+            tags = [{"fluffy":False, "majestic":False, "funny":True, "outfit":False},
+                    {"fluffy":False, "majestic":False, "funny":True, "outfit":False},
+                    {"fluffy":False, "majestic":False, "funny":True, "outfit":True},
+                    {"fluffy":True, "majestic":True, "funny":False, "outfit":False},
+                    {"fluffy":False, "majestic":True, "funny":False, "outfit":True},
+                    {"fluffy":False, "majestic":True, "funny":False, "outfit":False}]
+            files=[['1.jpg','2.jpg','3.jpg','4.jpg'],
+                   ['ginger 1.jpeg','ginger 2.jpeg','ginger 3.jpeg','ginger 4.jpeg'],
+                   ['grumpy 1.jpeg','grumpy 2.jpeg','grumpy 3.jpeg','grumpy 4.jpeg'],
+                   ['hamilton 1.jpeg','hamilton 2.jpeg','hamilton 3.jpeg','hamilton 4.jpeg'],
+                   ['1.jpg','2.jpg','3.jpg','4.jpg'],
+                   ['1.jpg','2.jpg','3.jpg','4.jpg'],]
+            for uploader in uploaders:
+                CurrentUploader = Uploader(username=uploader, pfp=f"{uploader}/pfp/pfp.jpg")
+                CurrentUploader.save()
+            for uploader, tag in zip(uploaders, tags):
+                upobj=Uploader.objects.get(username=uploader)
+                currentTags = UploaderTags(uploader=upobj, fluffy=tag["fluffy"], majestic=tag["majestic"], funny=tag["funny"], outfit=tag["outfit"])
+                currentTags.save()
+            for uploader,file in zip(uploaders,files):
+                for filename in file:
+                    post = Post(posterid=Uploader.objects.get(username=uploader), content=filename)
+                    post.save()
         return
-
