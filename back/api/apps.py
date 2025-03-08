@@ -70,7 +70,7 @@ class ApiConfig(AppConfig):
                 files=[['1.jpg','2.jpg','3.jpg','4.jpg'],
                     ['ginger 1.jpeg','ginger 2.jpeg','ginger 3.jpeg','ginger 4.jpeg'],
                     ['grumpy 1.jpeg','grumpy 2.jpeg','grumpy 3.jpeg','grumpy 4.jpeg'],
-                    ['hamilton 1.jpeg','hamilton 2.jpeg','hamilton 3.jpeg','hamilton 4.jpeg'],
+                    ['hamilton 1.jpeg','hamilton 2.jpeg','hamilton 3.jpeg','hamilton 4.jpeg', 'hamilton 5.jpeg'],
                     ['1.jpg','2.jpg','3.jpg','4.jpg'],
                     ['1.jpg','2.jpg','3.jpg','4.jpg'],]
                 for uploader in uploaders:
